@@ -5,11 +5,11 @@ const app = express();
 
 //io setup
 const http = require("http").Server(app);
-const port = process.env.PORT || 3300;
-
+const port = process.env.PORT || 3000;
+/*
 app.get('/', (req, res) => {
     res.send('Hello Express')
-});
+});*/
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
