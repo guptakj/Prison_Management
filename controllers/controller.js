@@ -3,8 +3,7 @@ const Case_register=require('../models/case_register');
 const Diary_register=require('../models/diary_register');
 const In_out_register=require('../models/in_out_register');
 const Parole_register=require('../models/parole_register');
-const Interview_request=require('../models/interview_request');
-const In_out_register=require('../models/in_out_register');
+const Interview_register=require('../models/interview_request');
 const Duty_register=require('../models/duty_register');
 
 
@@ -158,6 +157,8 @@ exports.add_case_info = function (req, res) {
         }
         console.log('New criminal info added successfully');
         res.send(data);
+    });
+};
 
 exports.duty_register = function (req, res) {
     console.log("Duty register api is called");
@@ -185,23 +186,6 @@ exports.duty_register = function (req, res) {
 };
 
 
-exports.show_prisoners_details_by_id =function(req,res){
-    var id = req.body.id;
-    console.log("Show_Prisoner_details_by_id Api is called");
-    // Criminals.find({prisoner_id:{$in: id} }, function (err, user) {
-    //     res.send(user);
-    // });
-    // Criminals.aggregate(
-    //     {
-    //         $lookup:
-    //             {
-    //                 from: "case_register",
-    //                 as: "enrollee_info"
-    //             }
-    //     },function(err,user){
-    //         console.log(user);
-    // });
-    // res.send()
 
 exports.search_criminal_department_by_name= function (req , res) {
     var criminal_name=req.body.name;
@@ -239,4 +223,41 @@ exports.diary_register = function (req, res) {
         res.send(info);
     });
 
+};
+
+exports.interview_register= function(req,res)
+{
+    console.log("Adding api is called");
+    let info = new Interview_register(
+        {
+            prisoner_id:req.body.id,
+            name:req.body.name,
+            visitor_name:req.body.vname,
+            relation_with_prisoner:req.body.relation,
+            duration:req.body.duration,
+            time_start:req.body.time_start,
+            time_end:req.body.time_end,
+            visit_date:req.body.date
+
+        }
+    );
+
+
+    info.save(function (err) {
+        if (err) {
+            return next(err);
+        }
+        console.log('New criminal info added successfully');
+        res.send(info);
+    });
+
+
+};
+
+exports.search_interview_prisoner= function (req , res) {
+    var prisoner_name = req.body.name;
+    console.log("Search By Name Api is called");
+    Interview_register.find({name:{$in:prisoner_name } }, function (err, user) {
+        res.send(user);
+    });
 };
