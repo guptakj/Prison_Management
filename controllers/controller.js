@@ -5,7 +5,7 @@ const In_out_register=require('../models/in_out_register');
 
 
 exports.add_criminal_info = function (req, res) {
-    console.log("Adding api is called");
+    console.log("Add criminal Information api is called");
     let info = new Criminals(
         {
             prisoner_id:req.body.id,
@@ -41,8 +41,6 @@ exports.add_criminal_info = function (req, res) {
 
 };
 
-
-
 exports.search_by_name= function (req , res) {
     var criminal_name = req.body.name;
     console.log("Search By Name Api is called");
@@ -57,4 +55,52 @@ exports.search_all= function (req , res) {
     Criminals.find( function (err, user) {
         res.send(user);
     });
+};
+
+exports.add_case_info = function (req, res) {
+    console.log("Adding case info api is called");
+    let data = new Case_register(
+        {
+            prisoner_id:req.body.id,
+            name:req.body.name,
+            sentence_duration:req.body.duration
+        }
+    );
+
+    var conviction= req.body.conviction_details;
+    var conv_details= conviction.split(",");
+    for(var i=0;i<=conv_details.length;i++)
+    {
+        data.conviction_details .push(conv_details[i]);
+    }
+
+
+    data.save(function (err) {
+        if (err) {
+            return next(err);
+        }
+        console.log('New criminal info added successfully');
+        res.send(data);
+    });
+
+
+};
+
+exports.show_prisoners_details_by_id =function(req,res){
+    var id = req.body.id;
+    console.log("Show_Prisoner_details_by_id Api is called");
+    // Criminals.find({prisoner_id:{$in: id} }, function (err, user) {
+    //     res.send(user);
+    // });
+    // Criminals.aggregate(
+    //     {
+    //         $lookup:
+    //             {
+    //                 from: "case_register",
+    //                 as: "enrollee_info"
+    //             }
+    //     },function(err,user){
+    //         console.log(user);
+    // });
+    // res.send()
 };
