@@ -7,7 +7,7 @@ const InterviewRequestRegisterSchema = new mongoose.Schema({
     duration:Number,
     time_start:Number,
     time_end:Number,
-    visit_date:date
+    visit_date:Date
 });
 
 module.exports = mongoose.model("interview_request", InterviewRequestRegisterSchema);
