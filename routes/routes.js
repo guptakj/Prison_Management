@@ -23,7 +23,7 @@ router.post('/search_interview_prisoner',controller.search_interview_prisoner);
 ///////////////////////////Add New Info
 router.post('/add_criminal_info', controller.add_criminal_info);
 router.post('/add_parole_info', controller.add_parole_info);
-router.post('/add_interview_request', controller.add_interview_request);
+//router.post('/add_interview_request', controller.add_interview_request);
 router.post('/add_in_out_register', controller.add_in_out_register);
 router.post('/interview_register',controller.interview_register);
 

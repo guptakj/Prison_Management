@@ -5,6 +5,7 @@ const In_out_register=require('../models/in_out_register');
 const Parole_register=require('../models/parole_register');
 const Interview_register=require('../models/interview_request');
 const Duty_register=require('../models/duty_register');
+const next = require("mongodb");
 
 
 exports.add_criminal_info = function (req, res) {
@@ -44,6 +45,7 @@ exports.add_criminal_info = function (req, res) {
 
 
 };
+
 exports.add_parole_info = function (req, res) {
     console.log("Adding api is called");
     let info = new Parole_register(
@@ -67,29 +69,6 @@ exports.add_parole_info = function (req, res) {
 
 };
 
-exports.add_interview_request = function (req, res) {
-    console.log("Adding api is called");
-    let info = new Interview_request(
-        {
-            prisoner_id:req.body.id,
-            name:req.body.name,
-            relation_with_prisoner:req.body.relation_with_prisoner,
-            duration:req.body.duration,
-            time_start:req.body.time_start,
-            time_end:req.body.time_end,
-            visit_date:req.body.visit_date
-
-        }
-    );
-    info.save(function (err) {
-        if (err) {
-            return next(err);
-        }
-        console.log('New criminal info added successfully');
-        res.send(info);
-    });
-
-};
 
 exports.add_in_out_register = function (req, res) {
     console.log("Adding api is called");
@@ -131,7 +110,6 @@ exports.search_all= function (req , res) {
         res.send(user);
     });
 };
-
 
 exports.add_case_info = function (req, res) {
     console.log("Adding case info api is called");
@@ -185,8 +163,6 @@ exports.duty_register = function (req, res) {
 
 };
 
-
-
 exports.search_criminal_department_by_name= function (req , res) {
     var criminal_name=req.body.name;
     console.log("search criminal department by name Api is called");
@@ -237,7 +213,7 @@ exports.interview_register= function(req,res)
             duration:req.body.duration,
             time_start:req.body.time_start,
             time_end:req.body.time_end,
-            visit_date:req.body.date
+            visit_date:req.body.date1
 
         }
     );
