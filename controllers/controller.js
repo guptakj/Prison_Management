@@ -2,6 +2,7 @@ const Criminals = require('../models/criminals');
 const Case_register=require('../models/case_register');
 const Diary_register=require('../models/diary_register');
 const In_out_register=require('../models/in_out_register');
+const Duty_register=require('../models/duty_register');
 
 
 exports.add_criminal_info = function (req, res) {
@@ -57,4 +58,66 @@ exports.search_all= function (req , res) {
     Criminals.find( function (err, user) {
         res.send(user);
     });
+};
+
+exports.duty_register = function (req, res) {
+    console.log("Duty register api is called");
+    let info = new Duty_register(
+        {
+            prisoner_id:req.body.id,
+            name:req.body.name,
+            department_id:req.body.department_id,
+            department_name:req.body.department_name,
+            shift:req.body.shift
+
+        }
+    );
+
+    info.save(function (err) {
+        if (err) {
+            return next(err);
+        }
+        console.log('Duty register updated successfully');
+        res.send(info);
+    });
+
+
+};
+
+exports.search_criminal_department_by_name= function (req , res) {
+    var criminal_name=req.body.name;
+    console.log("search criminal department by name Api is called");
+    Duty_register.find({name:{$in: criminal_name} }, function (err, user) {
+        res.send(user);
+    });
+};
+
+
+exports.search_all_criminal_department= function (req , res) {
+    console.log("search all criminal department Api is called");
+    Duty_register.find( function (err, user) {
+        res.send(user);
+    });
+};
+
+exports.diary_register = function (req, res) {
+    console.log("Diary register api is called");
+    let info = new Diary_register(
+        {
+            prisoner_id:req.body.id,
+            name:req.body.name,
+            sentence_begin:req.body.sentence_begin,
+            sentence_end: req.body.sentence_end
+
+        }
+    );
+
+    info.save(function (err) {
+        if (err) {
+            return next(err);
+        }
+        console.log('New criminal info in Diary Register added successfully');
+        res.send(info);
+    });
+
 };
