@@ -240,14 +240,21 @@ exports.search_interview_prisoner= function (req , res) {
 
 exports.global_search= function (req , res) {
     var pid = req.body.id;
-    console.log("Global Search By Name Api is called");
-    Criminals.aggregate([{
-        $lookup: {
-            from: "case_register",
-            localField: "prisoner_id",
-            foreignField: "_id",
-            as: "case_details"
-        }
-    }])
+    Criminals.findOne({prisoner_id:pid }, function (err, user) {
+        Case_register.findOne({prisoner_id :pid , name : user.name},function (err,user2) {
+            var result=[];
+            // result[0]={
+            //     "name": user.name,
+            //     "prisoner_id" : pid,
+            //     "conviction_details": user2.conviction_details,
+            //     "age": user.age
+            // }
+            result.push(user2);
+            result.push(user);
+            res.send(result);
+        });
+
+    });
 
 };
+
