@@ -237,3 +237,17 @@ exports.search_interview_prisoner= function (req , res) {
         res.send(user);
     });
 };
+
+exports.global_search= function (req , res) {
+    var pid = req.body.id;
+    console.log("Global Search By Name Api is called");
+    Criminals.aggregate([{
+        $lookup: {
+            from: "case_register",
+            localField: "prisoner_id",
+            foreignField: "_id",
+            as: "case_details"
+        }
+    }])
+
+};
