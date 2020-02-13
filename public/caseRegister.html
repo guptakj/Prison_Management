@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<title>Case Register</title>
+</head>
+<body>
+	
+	<div>
+		<h1>Jail Management</h1><a href="index.html">Home</a>
+	</div>
+	<div style="height: 600px;padding: 40px;width: 40%;">
+		<h2>CASE REGISTER</h2>
+		<form action="/api/add_case_details" method="POST">
+			<h3>Prisoner Id:</h3>
+			<input type="number" name="id" class="input" required="fill" autofocus="">
+			<h3>Name:</h3>
+			<input type="text" name="name" class="input" required="fill">
+			<h3>Sentence Duration:</h3>
+			<input type="text" name="duration" class="input" required="fill">
+			<h3>Conviction Details:</h3>
+			<input type="text" name="conviction_details" class="input" required="fill"><br><br>
+			<input type="submit" value="Add" style="width: 80px;font-size: 20px;
+			">
+		</form>
+	</div>
+</body>
+</html>
