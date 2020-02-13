@@ -100,8 +100,7 @@ exports.search_by_name= function (req , res) {
     var criminal_name = req.body.name;
     console.log("Search By Name Api is called");
     Criminals.find({name:{$in: criminal_name} }, function (err, user) {
-        res.send(user);
-    });
+        res.send(user)});
 };
 
 exports.search_all= function (req , res) {
