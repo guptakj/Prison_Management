@@ -40,7 +40,8 @@ exports.add_criminal_info = function (req, res) {
             return next(err);
         }
         console.log('New criminal info added successfully');
-        res.send(info);
+
+        res.send('added to criminal Info');
     });
 
 

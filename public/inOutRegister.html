@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<title>IN-OUT Register</title>
+</head>
+<body>
+	
+	<div>
+		<h1>Jail Management</h1><a href="index.html">Home</a>
+	</div>
+	<div style="height: 100%;padding: 40px;width: 40%;">
+		<h2>IN-OUT REGISTER</h2>
+		<form action="/api/add_in_out_register" method="POST">
+			<h3>visitor Type:</h3>
+			<input type="text" name="visitor_type" class="input" required="fill" autofocus="">
+			<h3>Visitor Id:</h3>
+			<input type="number" name="visitor_id" class="input" required="fill">
+			<h3>Visitor Name:</h3>
+			<input type="text" name="visitor_name" class="input" required="fill">
+			<h3>Date IN</h3>
+			<input type="date" name="date_in" class="input" required="fill">
+            <h3>Date OUT</h3>
+			<input type="date" name="date_out" class="input" required="fill">
+			<h3>Time IN</h3>
+			<input type="text" name="time_in" class="input" required="fill">
+			<h3>Time OUT</h3>
+			<input type="text" name="time_out" class="input" required="fill">
+			<h3>Place</h3>
+			<input type="text" name="place" class="input" required="fill">
+			<br><br>
+			<input type="submit" value="Add" style="width: 80px;font-size: 20px;">
+		</form>
+	</div>
+
+</body>
+</html>
