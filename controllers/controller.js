@@ -99,8 +99,7 @@ exports.search_by_name= function (req , res) {
     var criminal_name = req.body.name;
     console.log("Search By Name Api is called");
     Criminals.find({name:{$in: criminal_name} }, function (err, user) {
-        res.send(user);
-    });
+        res.send(user)});
 };
 
 exports.search_all= function (req , res) {
@@ -237,3 +236,24 @@ exports.search_interview_prisoner= function (req , res) {
         res.send(user);
     });
 };
+
+exports.global_search= function (req , res) {
+    var pid = req.body.id;
+    Criminals.findOne({prisoner_id:pid }, function (err, user) {
+        Case_register.findOne({prisoner_id :pid , name : user.name},function (err,user2) {
+            var result=[];
+            // result[0]={
+            //     "name": user.name,
+            //     "prisoner_id" : pid,
+            //     "conviction_details": user2.conviction_details,
+            //     "age": user.age
+            // }
+            result.push(user2);
+            result.push(user);
+            res.send(result);
+        });
+
+    });
+
+};
+

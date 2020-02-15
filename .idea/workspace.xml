@@ -4,9 +4,11 @@
     <list default="true" id="7ab892b0-43a3-4d89-9558-73edf0e54227" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/interview_request.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/interview_request.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/case_register.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/case_register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/criminals.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/criminals.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/caseRegister.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/caseRegister.html" afterDir="false" />
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,10 +28,28 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="11.10.0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager">
     <configuration name="app.js" type="NodeJSConfigurationType" nameIsGenerated="true" path-to-js-file="app.js" working-dir="$PROJECT_DIR$">
@@ -49,12 +69,31 @@
       <workItem from="1580188617718" duration="1748000" />
       <workItem from="1580192425332" duration="682000" />
       <workItem from="1580899865547" duration="14076000" />
-      <workItem from="1581148106881" duration="9844000" />
+      <workItem from="1581148106881" duration="10085000" />
+      <workItem from="1581580148252" duration="1698000" />
+      <workItem from="1581583473739" duration="1837000" />
+      <workItem from="1581585422400" duration="1737000" />
+      <workItem from="1581587355464" duration="1795000" />
+      <workItem from="1581589173893" duration="1012000" />
+      <workItem from="1581580148252" duration="8765000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="WindowStateProjectService">
     <state x="443" y="168" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1580903132799">
@@ -65,25 +104,36 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="120" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1580906841469" />
-    <state width="1323" height="178" key="GridCell.Tab.0.bottom" timestamp="1581160388514">
+    <state width="1323" height="178" key="GridCell.Tab.0.bottom" timestamp="1581589676847">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="178" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1581160388514" />
-    <state width="1323" height="178" key="GridCell.Tab.0.center" timestamp="1581160388514">
+    <state width="1323" height="178" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1581589676847" />
+    <state width="1323" height="178" key="GridCell.Tab.0.center" timestamp="1581589676846">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="178" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1581160388514" />
-    <state width="1323" height="178" key="GridCell.Tab.0.left" timestamp="1581160388514">
+    <state width="1323" height="178" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1581589676846" />
+    <state width="1323" height="178" key="GridCell.Tab.0.left" timestamp="1581589676846">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="178" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1581160388514" />
-    <state width="1323" height="178" key="GridCell.Tab.0.right" timestamp="1581160388514">
+    <state width="1323" height="178" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1581589676846" />
+    <state width="1323" height="178" key="GridCell.Tab.0.right" timestamp="1581589676847">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="178" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1581160388514" />
+    <state width="1323" height="178" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1581589676847" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1581154993725">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1581154993725" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/controllers/controller.js</url>
+          <line>141</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
