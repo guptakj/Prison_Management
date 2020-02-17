@@ -1,33 +1,125 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<!-- Required meta tags -->
 	<meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- CSS -->
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<!-- Bootstrap CSS -->
-	<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-	-->
-	
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style type="text/css">
+    	*{
+    		margin:0;
+    		padding: 0;
+    		font-family: sans-serif;
+    	}
+    	.box{
+    		margin: auto;
+    		padding: 50px;
+            padding-top: 15px;
+    		background-color: #708090;
+    		margin-top: 150px;
+    		text-align: center;
+    		width: 40%;
+    		height: 300px;
+    		border-style: groove;
+            border-width: 1px;
+    		border-radius: 3px;
+    		align-items: center;
+    	}
+    	input{
+    		margin: 5px;
+    		width: 300px;
+    		height: 30px;
+    		border-style: groove;
+    		border-width: 0.6px;
+    		border-radius: 4px;
+    		border-color: transparent;
+    		border-bottom-color: black;
+
+    	}
+    	
+    	button{
+    		width: 300px;
+    		height: 30px;
+    		margin: 5px;
+    		border-style: none;
+    		border-radius: 2px;
+    	}
+        button:hover{
+            background-color: blue;
+        }
+        .g1{
+            
+            display: flex;
+            justify-content: center;
+            background-color: #6d6a6a;
+            width: 100%;
+            height: 45px;
+            margin-top: 5px;
+        } 
+
+    </style>
     
-	<title>Home</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+	<title>LogIn/SignUp</title>
 </head>
 <body>
 	<div>
-		<h1>Jail Management</h1><a href="index.html">Home</a>
+			<h1>Jail Management</h1>
+		</div>
+		<div class="g1">
+		</div>
+		
+	<div class="box">
+        <h1 id="b1">LOGIN</h1>
+        <h1 id="b2" hidden="">SIGNUP</h1>
+		<div id="signup" hidden="">
+			
+			<input type="text" name="email" placeholder="email address" id="email" required=""><br>
+			<input type="text" name="id" placeholder="username" id="name" required=""><br>
+			<input type="password" name="password" placeholder="password" id="password1" ><br>
+			<input type="password" name="password" placeholder="re-enter password" id="password2" required=""><br>
+			<button id="signup1">SignUp</button><br>
+			<button id="login2">LogIn</button>
+		</div>
+		<div id="login">
+			<input type="text" name="id" placeholder="username" id="name" required=""><br>
+			<input type="password" name="password" placeholder="password" id="password" required=""><br>
+			<button id="login1">LogIn</button><br>
+			<button id=signup2>SignUp</button>
+		</div>
+		
 	</div>
-	<div style="width: 25%;height: 50%;">
-		<p style="border-style:groove;border-width:1px;height: 50px;font-size: 40px;padding:10px;margin: 0px;border-radius:1px;"><a href="caseRegister.html">Case Register</a></p>
-		<p style="border-style:groove;border-width:1px;height: 50px;font-size: 40px;padding:10px;margin: 0px;border-radius:1px; "><a href="criminalRegister.html">Criminal Register</a></p>
-		<p style="border-style:groove;border-width:1px;height: 50px;font-size: 40px;padding:10px; margin: 0px;border-radius:1px;margin: 0px;border-radius:1px;"><a href="diaryRegister.html">Diary Register</a></p>
-		<p style="border-style:groove;border-width:1px;height: 50px;font-size: 40px;padding:10px; margin: 0px;border-radius:1px;"><a href="dutyRegister.html">Duty Register</a></p>
-		<p style="border-style:groove;border-width:1px;height: 50px;font-size: 40px;padding:10px; margin: 0px;border-radius:1px;"><a href="inOutRegister.html">IN-OUT Register</a></p>
-		<p style="border-style:groove;border-width:1px;height: 50px;font-size: 40px;padding:10px;margin: 0px;border-radius:1px; "><a href="interviewRegister.html">Interview Register</a></p>
-		<p style="border-style:groove;border-width:1px;height: 50px;font-size: 40px;padding:10px;margin: 0px;border-radius:1px; "><a href="paroleRegister.html">Parole Register</a></p>
-	</div>
-	
+	<script>
+		$(document).ready(function(){
+			$('#login2').click(function()
+				{
+					$('#login').toggle(1);
+					$('#signup').hide();
+                    $('#b1').show();
+                    $('#b2').hide();
+					});
+			$('#signup2').click(function()
+				{
+					$('#signup').toggle(1);
+					$('#login').hide();
+                    $('#b2').show();
+                    $('#b1').hide();
+				});
+            $('#login1').click(function(){
+                var username=$('#name').val();
+                var password=$('#password').val();
+            
+                    window.location.href="home.html";
+
+
+            });
+            $('#signup1').click(function(){
+                var email=$('#email').val();
+                var username=$('#name').val();
+                var password1=$('#password1').val();
+                var password2=$('#password2').val();
+                alert(email+" "+username+" "+password1+" "+password2);
+            });
+		});
+	</script>
 </body>
 </html>

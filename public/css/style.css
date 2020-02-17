@@ -1,17 +1,60 @@
 body{
 	margin: 0px;
 	padding: 0px;
-	background-color: #DBF3ED;
+    background-image:url('prison2.jpg'); 
 }
 div{
 		width: 100%;
 	margin: auto;
 	text-align: center;
-	border-style: groove;
-	border-width: 1px;
+	
 }
-.input{
+
+input{
 	width: 300px;
 	height: 25px;
+	
 
 }
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+.g1{
+	
+	display: flex;
+	justify-content: center;
+	background-color: #6d6a6a;
+} 
+.g1 a{
+	color: black;
+	text-align: center;
+	font-weight: bold;
+	text-decoration: none;
+	text-transform: uppercase;
+	padding: 12px 24px;
+}
+.g1 a:hover{
+	background-color: white;
+	color: black;
+	cursor: pointer;
+}
+
+@media screen and (max-width:700px)
+{
+	.g1{
+		flex-direction: column;
+	}
+}
+#n1{
+
+	display: flex;
+	justify-content: center;
+	padding: 12px 24px;
+	color:black;
+	background-color:#e6faff;
+	text-align: center;
+	font-weight: bold;
+}
+
