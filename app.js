@@ -6,7 +6,7 @@ const app = express();
 
 //io setup
 const http = require("http").Server(app);
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3200;
 /*
 app.get('/', (req, res) => {
     res.send('Hello Express')
