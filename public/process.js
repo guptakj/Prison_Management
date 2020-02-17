@@ -1,36 +1,36 @@
 $(document).ready(function(){
-				$('#login2').click(function()
-				{
-					$('#login').toggle(1);
-					$('#signup').hide();
-                    $('#b1').show();
-                    $('#b2').hide();
+
+				$('#policesignin1').click(function()
+					{
+						$('#policesignin').show();
+						$('#policelogin').hide();
 					});
-
-			$('#signup2').click(function()
-				{
-					$('#signup').toggle(1);
-					$('#login').hide();
-                    $('#b2').show();
-                    $('#b1').hide();
-				});
-
-            $('#login1').click(function(){
-                var username=$('#name').val();
-                var password=$('#password').val();
-            
-                    window.location.href="home.html";
-
-
-            });
-
-            $('#signup1').click(function(){
-                var email=$('#email').val();
-                var username=$('#name').val();
-                var password1=$('#password1').val();
-                var password2=$('#password2').val();
-                alert(email+" "+username+" "+password1+" "+password2);
-            });
+				$('#adminsignin1').click(function()
+					{
+						$('#adminsignin').show();
+						$('#adminlogin').hide();
+					});
+				$('#datamsignin1').click(function()
+					{
+						$('#datamsignin').show();
+						$('#datamlogin').hide();
+					});
+				$('#policelogin1').click(function()
+					{
+						$('#policesignin').hide();
+						$('#policelogin').show();
+					});
+				$('#adminlogin1').click(function()
+					{
+						$('#adminsignin').hide();
+						$('#adminlogin').show();
+					});
+				$('#datamlogin1').click(function()
+					{
+						$('#datamsignin').hide();
+						$('#datamlogin').show();
+					});
+				
 
 				$('#logout').click(function(){
 					console.log('kill');
