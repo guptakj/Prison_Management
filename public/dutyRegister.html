@@ -21,13 +21,13 @@
 			<a href="inOutRegister.html" class="l1">IN-OUT REGISTER</a>
 			<a href="interviewRegister.html" class="l1">INTERVIEW REGISTER</a>
 			<a href="paroleRegister.html" class="l1">PAROLE REGISTER</a>
-			<button>Logout</button>
+			<button id="logout">Logout</button>
 		</div>
 		<div id="n1">
 			<h2>DUTY REGISTER</h2>
 		</div>
 		<div style="height: 100%;padding: 40px;width: 40%;">
-			<form action="/api/duty_register" method="POST">
+			<form id="dutyregister" >
 				<h3>Prisoner Id:</h3>
 				<input type="number" name="id" class="input" required="fill" autofocus="">
 				<h3>Name:</h3>
@@ -43,13 +43,7 @@
 			</form>
 		</div>
 		
-		<script>
-			$(document).ready(function(){
-				$('button').click(function(){
-					window.location.href="index.html";
-				});
-			});
-		</script>
+		<script type="text/javascript" src="process.js"></script>
 	
 </body>
 </html>

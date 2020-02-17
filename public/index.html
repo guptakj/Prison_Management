@@ -88,38 +88,6 @@
 		</div>
 		
 	</div>
-	<script>
-		$(document).ready(function(){
-			$('#login2').click(function()
-				{
-					$('#login').toggle(1);
-					$('#signup').hide();
-                    $('#b1').show();
-                    $('#b2').hide();
-					});
-			$('#signup2').click(function()
-				{
-					$('#signup').toggle(1);
-					$('#login').hide();
-                    $('#b2').show();
-                    $('#b1').hide();
-				});
-            $('#login1').click(function(){
-                var username=$('#name').val();
-                var password=$('#password').val();
-            
-                    window.location.href="home.html";
-
-
-            });
-            $('#signup1').click(function(){
-                var email=$('#email').val();
-                var username=$('#name').val();
-                var password1=$('#password1').val();
-                var password2=$('#password2').val();
-                alert(email+" "+username+" "+password1+" "+password2);
-            });
-		});
-	</script>
+	   <script type="text/javascript" src="process.js"></script>
 </body>
 </html>
