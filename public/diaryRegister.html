@@ -2,27 +2,52 @@
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   
 	<title>Diary Register</title>
 </head>
 <body>
 	
-	<div>
-		<h1>Jail Management</h1><a href="index.html">Home</a>
-	</div>
-	<div style="height: 100%;padding: 40px;width: 40%;">
-		<h2>DIARY REGISTER</h2>
-		<form action="/api/diary_register" method="POST">
-			<h3>Prisoner Id:</h3>
-			<input type="number" name="id" class="input" required="fill" autofocus="">
-			<h3>Name:</h3>
-			<input type="text" name="name" class="input" required="fill">
-			<h3>Sentence Begin:</h3>
-			<input type="text" name="sentence_begin" class="input" required="fill">
-			<h3>Sentence End</h3>
-			<input type="text" name="sentence_end" class="input" required="fill">
-			<br><br>
-			<input type="submit" value="Add" style="width: 80px;font-size: 20px;">
-		</form>
-	</div>
+		<div>
+			<h1>Jail Management</h1>
+		</div>
+		
+		<div class="g1">
+			<a href="index.html" class="l1">Home</a>
+			<a href="caseRegister.html" class="l1">CASE REGISTER</a>
+			<a href="criminalRegister.html" class="l1">CRIMINAL REGISTER</a>
+			<a href="diaryRegister.html" class="l1">DIARY REGISTER</a>
+			<a href="dutyRegister.html" class="l1">DUTY REGISTER</a>
+			<a href="inOutRegister.html" class="l1">IN-OUT REGISTER</a>
+			<a href="interviewRegister.html" class="l1">INTERVIEW REGISTER</a>
+			<a href="paroleRegister.html" class="l1">PAROLE REGISTER</a>
+			<button>Logout</button>
+		</div>
+		<div id="n1">
+			<h2>DIARY REGISTER</h2>
+		</div>
+		<div style="height: 100%;padding: 40px;width: 40%;">
+			<form action="/api/diary_register" method="POST">
+				<h3>Prisoner Id:</h3>
+				<input type="number" name="id" class="input" required="fill" autofocus="">
+				<h3>Name:</h3>
+				<input type="text" name="name" class="input" required="fill">
+				<h3>Sentence Begin:</h3>
+				<input type="text" name="sentence_begin" class="input" required="fill">
+				<h3>Sentence End</h3>
+				<input type="text" name="sentence_end" class="input" required="fill">
+				<br><br>
+				<input type="submit" value="Add" style="width: 80px;font-size: 20px;">
+			</form>
+		</div>
+		
+		<script>
+			$(document).ready(function(){
+				$('button').click(function(){
+					window.location.href="login.html";
+				});
+			});
+		</script>
+		
 </body>
 </html>
