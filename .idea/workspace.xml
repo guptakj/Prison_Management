@@ -20,9 +20,11 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="11.10.0" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="last_opened_file_path" value="E:/faltu test for sih 2020/pms-master/pms-master" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -53,6 +55,8 @@
       <workItem from="1580188617718" duration="1748000" />
       <workItem from="1580192425332" duration="682000" />
       <workItem from="1580899865547" duration="14076000" />
+      <workItem from="1581148106881" duration="9844000" />
+      <workItem from="1581579448342" duration="1219000" />
       <workItem from="1581148106881" duration="10085000" />
       <workItem from="1581580148252" duration="1698000" />
       <workItem from="1581583473739" duration="1837000" />
