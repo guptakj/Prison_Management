@@ -5,9 +5,74 @@ const In_out_register=require('../models/in_out_register');
 const Parole_register=require('../models/parole_register');
 const Interview_register=require('../models/interview_request');
 const Duty_register=require('../models/duty_register');
+const Data=require('../models/data');
+const Admin=require('../models/admin');
+const Police=require('../models/police');
+
 const next = require("mongodb");
 
+exports.add_admin_info = function (req, res) {
+    console.log("Add admin Information api is called");
+    let info = new Admin(
+        {
+            admin_user:req.body.admin_user,
+            admin_pass:req.body.admin_pass
 
+        }
+    );
+
+    info.save(function (err) {
+        if (err) {
+            return next(err);
+        }
+        console.log('Admin Data inserted');
+        //res.send(user);
+    });
+
+
+};
+
+exports.add_police_info = function (req, res) {
+    console.log("Add police Information api is called");
+    let info = new Police(
+        {
+            police_user:req.body.police_user,
+            police_pass:req.body.police_pass
+
+        }
+    );
+
+    info.save(function (err) {
+        if (err) {
+            return next(err);
+        }
+        console.log('police Data inserted');
+        //res.send(user);
+    });
+
+
+};
+
+exports.add_data_info = function (req, res) {
+    console.log("Add data manager Information api is called");
+    let info = new Data(
+        {
+            data_user:req.body.data_user,
+            data_pass:req.body.data_pass
+
+        }
+    );
+
+    info.save(function (err) {
+        if (err) {
+            return next(err);
+        }
+        console.log('Data manager Data inserted');
+        //res.send(user);
+    });
+
+
+};
 exports.add_criminal_info = function (req, res) {
     console.log("Add criminal Information api is called");
     let info = new Criminals(
@@ -40,8 +105,7 @@ exports.add_criminal_info = function (req, res) {
             return next(err);
         }
         console.log('New criminal info added successfully');
-
-        res.send('added to criminal Info');
+        //res.send(user);
     });
 
 
@@ -100,8 +164,7 @@ exports.search_by_name= function (req , res) {
     var criminal_name = req.body.name;
     console.log("Search By Name Api is called");
     Criminals.find({name:{$in: criminal_name} }, function (err, user) {
-        res.send(user);
-    });
+        res.send(user)});
 };
 
 exports.search_all= function (req , res) {
@@ -238,3 +301,24 @@ exports.search_interview_prisoner= function (req , res) {
         res.send(user);
     });
 };
+
+exports.global_search= function (req , res) {
+    var pid = req.body.id;
+    Criminals.findOne({prisoner_id:pid }, function (err, user) {
+        Case_register.findOne({prisoner_id :pid , name : user.name},function (err,user2) {
+            var result=[];
+            // result[0]={
+            //     "name": user.name,
+            //     "prisoner_id" : pid,
+            //     "conviction_details": user2.conviction_details,
+            //     "age": user.age
+            // }
+            result.push(user2);
+            result.push(user);
+            res.send(result);
+        });
+
+    });
+
+};
+
