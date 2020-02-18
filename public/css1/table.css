@@ -1,9 +1,52 @@
 body{
+    background-image:url('prison2.jpg');
+    padding-top: 50px
+}
+.bigbig
+{
+    background-image:url('prison1.jpg');
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.g1{
 
-    background-image:url('prison2.jpg'); 
-    padding-top: 150px
+    display: flex;
+    justify-content: center;
+    background-color: #6d6a6a;
+}
+.g1 a{
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 12px 24px;
+}
+.g1 a:hover{
+    background-color: white;
+    color: black;
+    cursor: pointer;
 }
 
+@media screen and (max-width:700px)
+{
+    .g1{
+        flex-direction: column;
+    }
+}
+#n1{
+
+    display: flex;
+    justify-content: center;
+    padding: 12px 24px;
+    color:black;
+
+    text-align: center;
+    font-weight: bold;
+}
 table {
     color: #333;
     font-family: Helvetica, Arial, sans-serif;
@@ -11,7 +54,12 @@ table {
     /* Table reset stuff */
     border-collapse: collapse; border-spacing: 0;
 }
+div{
+    width: 100%;
+    margin: auto;
+    text-align: center;
 
+}
 td, th {  border: 0 none; height: 30px; }
 
 th {

@@ -1,52 +1,8 @@
 body{
-
     background-image:url('prison2.jpg'); 
-    padding-top: 150px
+    padding-top: 50px
 }
 .bigbig
 {
 	background-image:url('prison1.jpg');
-}
-
-table {
-    color: #333;
-    font-family: Helvetica, Arial, sans-serif;
-    width: 640px;
-    /* Table reset stuff */
-    border-collapse: collapse; border-spacing: 0;
-}
-
-td, th {  border: 0 none; height: 30px; }
-
-th {
-    /* Gradient Background */
-    background: linear-gradient(#333 0%,#444 100%);
-    color: #ff9a9e; font-weight: bold;
-    height: 40px;
-}
-
-td { background: #FAFAFA; text-align: center; }
-
-/* Zebra Stripe Rows */
-
-tr:nth-child(even) td { background: #EEE; }
-tr:nth-child(odd) td { background: #FDFDFD; }
-
-/* First-child blank cells!*/
-tr td:first-child, tr th:first-child {
-    font-style: italic;
-    font-weight: bold;
-    font-size: 14px;
-    text-align: right;
-    padding-right: 10px;
-    width: 80px;
-}
-
-/* Add border-radius to specific cells! */
-tr:first-child th:nth-child(2) {
-    border-radius: 5px 0 0 0;
-}
-
-tr:first-child th:last-child {
-    border-radius: 0 5px 0 0;
 }
