@@ -11,6 +11,7 @@ const Police=require('../models/police');
 
 const next = require("mongodb");
 
+
 exports.add_admin_info = function (req, res) {
     console.log("Add admin Information api is called");
     let info = new Admin(
@@ -167,11 +168,13 @@ exports.search_by_name= function (req , res) {
         res.send(user)});
 };
 
+
+
 exports.search_all= function (req , res) {
     console.log("Search All Api is called");
 
     Criminals.find( function (err, user) {
-        res.send(user);
+        res.render('show',{user:user });
     });
 };
 

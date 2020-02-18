@@ -4,6 +4,8 @@ const express = require('express');
 const path=require('path');
 const app = express();
 
+app.set('view engine', 'ejs');
+
 //io setup
 const http = require("http").Server(app);
 const port = process.env.PORT || 3200;
@@ -31,7 +33,6 @@ var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 console.log("Mongoose connected");
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
-
 
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
