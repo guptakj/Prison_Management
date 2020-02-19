@@ -11,6 +11,8 @@ const Police=require('../models/police');
 
 const next = require("mongodb");
 
+
+
 exports.add_admin_info = function (req, res) {
     console.log("Add admin Information api is called");
     let info = new Admin(
@@ -164,14 +166,17 @@ exports.search_by_name= function (req , res) {
     var criminal_name = req.body.name;
     console.log("Search By Name Api is called");
     Criminals.find({name:{$in: criminal_name} }, function (err, user) {
-        res.send(user)});
+        res.send(user);
+    });
 };
 
 exports.search_all= function (req , res) {
     console.log("Search All Api is called");
 
-    Criminals.find( function (err, user) {
-        res.send(user);
+    Criminals.find({},function (err, user) {
+        var t={user};
+        res.send(t);
+        console.log(t);
     });
 };
 

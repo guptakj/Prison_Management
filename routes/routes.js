@@ -24,6 +24,7 @@ router.post('/search_all_criminal_department',controller.search_all_criminal_dep
 router.post('/global_search',controller.global_search);
 
 
+
 ///////////////////////////Add New Info/////////////////////////////////////////////////////////////////////////
 router.post('/add_criminal_info', controller.add_criminal_info);
 router.post('/add_parole_info', controller.add_parole_info);
