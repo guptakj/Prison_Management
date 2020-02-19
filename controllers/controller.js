@@ -174,15 +174,9 @@ exports.search_by_name= function (req , res) {
 exports.search_all= function (req , res) {
     console.log("Search All Api is called");
 
-<<<<<<< HEAD
-    Criminals.find({},function (err, user) {
-        var t={user};
-        res.send(t);
-        console.log(t);
-=======
+
     Criminals.find( function (err, user) {
-        res.render('show',{user:user });
->>>>>>> aa5d739ecbcf985638ffaa9b7ed812ac41b7eac8
+        res.send(user);
     });
 };
 
