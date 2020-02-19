@@ -15,7 +15,7 @@ router.get('/about', function (req, res) {
 
 ///////////////////////////Search/////////////////////////////////////////////////////////////////////////////////
 router.post('/search_by_name',controller.search_by_name);
-router.post('/search_all',controller.search_all);
+router.get('/search_all',controller.search_all);
 //router.post('/search_details_of_criminal',controller.show_prisoners_details_by_id);
 router.post('/search_interview_prisoner',controller.search_interview_prisoner);
 router.post('/search_criminal_department_by_name',controller.search_criminal_department_by_name);
