@@ -189,7 +189,7 @@ exports.search_all= function (req , res) {
 
 
     Criminals.find( function (err, user) {
-          res.send(user);
+          //res.send(user);
          /* for(var i=0;i<user.length;i++)
           {
             if(user[i].name==='sp')
@@ -197,7 +197,7 @@ exports.search_all= function (req , res) {
                 console.log(user[i].);
             }
           }*/
-       /// res.render('show',{user:user});
+        res.render('show',{user:user});
     });
 };
 
