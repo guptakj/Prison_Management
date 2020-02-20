@@ -6,3 +6,29 @@ body{
 {
 	background-image:url('prison1.jpg');
 }
+.g1{
+	background-color: none;
+	height: 35px;
+	width: 100%;
+	margin-left: 0px;
+	margin-right: 0px;
+
+}
+.g1 a{
+	text-decoration: none;
+	padding:0px;
+	color: white;
+	font-size: 20px;
+	font-weight: bolder;
+}
+h3,h2{
+	color: white;
+}
+#logout{
+	font-size: 20px;
+	background-color: transparent;
+	border:none;
+	color: white;
+	text-transform: uppercase;
+
+}

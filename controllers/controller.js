@@ -11,6 +11,15 @@ const Police=require('../models/police');
 
 const next = require("mongodb");
 
+exports.log_admin= function (req , res) {
+    
+    console.log("Admin login Api is called");
+    Admin.find( function (err, user) {
+        res.send(user);
+       
+
+    });
+};
 
 exports.add_admin_info = function (req, res) {
     console.log("Add admin Information api is called");
@@ -27,11 +36,13 @@ exports.add_admin_info = function (req, res) {
             return next(err);
         }
         console.log('Admin Data inserted');
-        //res.send(user);
+        console.log(info);
+        res.send(info);
     });
 
 
 };
+
 
 exports.add_police_info = function (req, res) {
     console.log("Add police Information api is called");
@@ -166,6 +177,8 @@ exports.search_by_name= function (req , res) {
     console.log("Search By Name Api is called");
     Criminals.find({name:{$in: criminal_name} }, function (err, user) {
         res.send(user);
+       
+
     });
 };
 
@@ -176,7 +189,15 @@ exports.search_all= function (req , res) {
 
 
     Criminals.find( function (err, user) {
-        res.send(user);
+          res.send(user);
+         /* for(var i=0;i<user.length;i++)
+          {
+            if(user[i].name==='sp')
+            {
+                console.log(user[i].);
+            }
+          }*/
+       /// res.render('show',{user:user});
     });
 };
 
