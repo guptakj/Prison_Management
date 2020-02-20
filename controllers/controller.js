@@ -25,8 +25,8 @@ exports.add_admin_info = function (req, res) {
     console.log("Add admin Information api is called");
     let info = new Admin(
         {
-            admin_user:req.body.admin_user,
-            admin_pass:req.body.admin_pass
+            admin_user:req.body.admin_name1,
+            admin_pass:req.body.admin_pass1
 
         }
     );
