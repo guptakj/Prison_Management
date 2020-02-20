@@ -18,9 +18,10 @@ router.get('/search_by_name',controller.search_by_name);
 router.get('/search_all',controller.search_all);
 router.get('/log_admin',controller.log_admin);
 //router.post('/search_details_of_criminal',controller.show_prisoners_details_by_id);
-router.post('/search_interview_prisoner',controller.search_interview_prisoner);
+router.post('/search_interview_prisoner_by_name',controller.search_interview_prisoner_by_name);
+router.get('/search_all_interview_prisoner',controller.search_all_interview_prisoner);
 router.post('/search_criminal_department_by_name',controller.search_criminal_department_by_name);
-router.post('/search_all_criminal_department',controller.search_all_criminal_department);
+router.get('/search_all_criminal_department',controller.search_all_criminal_department);
 
 router.post('/global_search',controller.global_search);
 

@@ -8,6 +8,7 @@
       <change beforePath="$PROJECT_DIR$/public/criminalRegister.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/criminalRegister.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/process.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/process.js" afterDir="false" />
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -48,6 +49,18 @@
       <recent name="D:\prison_management\Prison_Management\views" />
     </key>
   </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
   <component name="RunManager">
     <configuration name="app.js" type="NodeJSConfigurationType" nameIsGenerated="true" path-to-js-file="app.js" working-dir="$PROJECT_DIR$">
       <method v="2" />
@@ -77,7 +90,12 @@
       <workItem from="1581927506580" duration="905000" />
       <workItem from="1581580148252" duration="8765000" />
       <workItem from="1582052325414" duration="4065000" />
+
       <workItem from="1582185276546" duration="5714000" />
+      <workItem from="1582185276546" duration="1165000" />
+      <workItem from="1582189034813" duration="548000" />
+      <workItem from="1582185276546" duration="2603000" />
+      <workItem from="1582190785028" duration="1373000" />
     </task>
     <servers />
   </component>

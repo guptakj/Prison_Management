@@ -1,5 +1,8 @@
 $(document).ready(function(){
 
+
+
+
 	$('#login-a').on('submit',function(e){
 					e.preventDefault();
 			var name=$('#admin_name').val();
@@ -37,6 +40,10 @@ $(document).ready(function(){
 
 			});
 	});
+
+
+
+
 
 				$('#policesignin1').click(function()
 					{
@@ -138,8 +145,8 @@ $(document).ready(function(){
 							}),
 						contentType:"application/json",
 						success:function(data){
-							alert(photo);
-							window.location.href="diaryRegister.html";
+							
+							window.location.href="criminalRegister.html";
 						},
 						error:function(xhr,status,err){
 							console.log(err);
