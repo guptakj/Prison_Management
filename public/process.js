@@ -1,5 +1,8 @@
 $(document).ready(function(){
 
+
+
+
 	$('#login-a').on('submit',function(e){
 					e.preventDefault();
 			var name=$('#admin_name').val();
@@ -37,6 +40,10 @@ $(document).ready(function(){
 
 			});
 	});
+
+
+
+
 
 				$('#policesignin1').click(function()
 					{
