@@ -30,7 +30,7 @@
 			<h2>CRIMINAL REGISTER</h2>
 		</div>
 		<div style="height: 100%;padding: 40px;width: 40%;">
-			<form id="criminalregister">
+			<form id="criminalregister" >
 				<h3>Prisoner Id:</h3>
 				<input type="number" name="id" class="input" required="fill" autofocus="">
 				<h3>Name:</h3>
@@ -55,6 +55,10 @@
 				<input type="text" name="articles" class="input" required="fill">
 				<br><br>
 				<input type="submit" value="Add" style="width: 80px;font-size: 20px;" >
+
+			</form>
+			<form action="http://localhost:3200/api/search_all" method="GET">
+				<button id="view" style="width: 80px;font-size: 20px;">View Details </button>
 			</form>
 		</div>
 		

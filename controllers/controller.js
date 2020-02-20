@@ -189,14 +189,6 @@ exports.search_all= function (req , res) {
 
 
     Criminals.find( function (err, user) {
-          //res.send(user);
-         /* for(var i=0;i<user.length;i++)
-          {
-            if(user[i].name==='sp')
-            {
-                console.log(user[i].);
-            }
-          }*/
         res.render('show',{user:user});
     });
 };

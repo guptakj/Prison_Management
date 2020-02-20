@@ -75,6 +75,7 @@ $(document).ready(function(){
 					window.location.href="index.html";
 				});
 
+
 				/// ADD DATA TO MONGODB
 				///CASE-REGISTER
 				$('#caseregister').on('submit',function(e){
