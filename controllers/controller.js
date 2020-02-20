@@ -265,7 +265,8 @@ exports.search_criminal_department_by_name= function (req , res) {
 exports.search_all_criminal_department= function (req , res) {
     console.log("search all criminal department Api is called");
     Duty_register.find( function (err, user) {
-        res.send(user);
+      
+       res.render('show',{user:user});
     });
 };
 
@@ -320,11 +321,22 @@ exports.interview_register= function(req,res)
 
 };
 
-exports.search_interview_prisoner= function (req , res) {
+exports.search_interview_prisoner_by_name= function (req , res) {
     var prisoner_name = req.body.name;
     console.log("Search By Name Api is called");
     Interview_register.find({name:{$in:prisoner_name } }, function (err, user) {
+        
+
         res.send(user);
+    });
+};
+
+exports.search_all_interview_prisoner= function (req , res) {
+   
+    console.log("Search By all interview prisoner Api is called");
+    Interview_register.find( function (err, user) {
+
+        res.render('show_all_interview_prisoner',{user:user});
     });
 };
 
