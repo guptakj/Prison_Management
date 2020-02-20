@@ -12,8 +12,7 @@ const CriminalSchema = new mongoose.Schema({
     occupation: String,
     photo :String,
     article_submitted: {type:Array},
-    officer_in_charge:String,
-    details : {type : Schema.Types.ObjectId , ref :"Details"}
+    officer_in_charge:String
 });
 
 module.exports = mongoose.model("Criminals", CriminalSchema);

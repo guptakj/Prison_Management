@@ -1,5 +1,43 @@
 $(document).ready(function(){
 
+	$('#login-a').on('submit',function(e){
+					e.preventDefault();
+			var name=$('#admin_name').val();
+
+			var pass=$('#admin_pass').val();
+			//alert(name+" "+pass);
+
+			$.ajax({
+				url:"/api/log_admin",
+				type:"GET",
+				dataType:"json",
+				success:function(data){
+					var p=0;
+						for(var i=0;i<data.length;i++)
+						{
+							if(data[i].admin_user===name&&data[i].admin_pass===pass)
+							{
+								p=1;
+								window.location.href="caseRegister.html";
+							}
+						}
+						if(p===0)
+						{
+							alert("Invalid username & password");
+							location.reload(true);
+						}
+						
+			
+						//console.log(data);
+				},
+				error:function(){
+					console.log("error");
+				}
+
+
+			});
+	});
+
 				$('#policesignin1').click(function()
 					{
 						$('#policesignin').show();
@@ -55,6 +93,7 @@ $(document).ready(function(){
 							"conviction_details":conviction_details}),
 						contentType:"application/json",
 						success:function(data){
+							
 							window.location.href="caseRegister.html";
 						},
 						error:function(xhr,status,err){
@@ -98,7 +137,8 @@ $(document).ready(function(){
 							}),
 						contentType:"application/json",
 						success:function(data){
-							window.location.href="criminalRegister.html";
+							alert(photo);
+							window.location.href="diaryRegister.html";
 						},
 						error:function(xhr,status,err){
 							console.log(err);
