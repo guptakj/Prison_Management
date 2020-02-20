@@ -137,8 +137,8 @@ $(document).ready(function(){
 							}),
 						contentType:"application/json",
 						success:function(data){
-							alert(photo);
-							window.location.href="diaryRegister.html";
+							
+							window.location.href="criminalRegister.html";
 						},
 						error:function(xhr,status,err){
 							console.log(err);
