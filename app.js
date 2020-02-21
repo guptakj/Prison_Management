@@ -8,7 +8,7 @@ app.set('view engine', 'ejs');
 
 //io setup
 const http = require("http").Server(app);
-const port = process.env.PORT || 3200;
+const port = process.env.PORT || 3000;
 /*
 app.get('/', (req, res) => {
     res.send('Hello Express')
