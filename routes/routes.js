@@ -39,6 +39,6 @@ router.post('/diary_register',controller.diary_register);
 router.post('/add_admin_info',controller.add_admin_info);
 router.post('/add_police_info',controller.add_police_info);
 router.post('/add_data_info',controller.add_data_info);
-
+router.get('/count',controller.count_prisoners);
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 module.exports = router;

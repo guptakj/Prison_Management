@@ -332,6 +332,15 @@ exports.search_all_interview_prisoner= function (req , res) {
     });
 };
 
+exports.count_prisoners= function (req , res) {
+    console.log("Count");
+
+    Criminals.count().then((count) => {
+        console.log(count);
+    });
+};
+
+
 exports.global_search= function (req , res) {
     var pid = req.body.id;
     Criminals.findOne({prisoner_id:pid }, function (err, user) {
