@@ -367,6 +367,42 @@ exports.search_parole_prisoner= function (req , res) {
     });
 };
 
+//---------------------------------------------------------------duty----------------------------------------////
+
+exports.Duty_register= function(req,res)
+{
+    console.log("Adding duty_register api is called");
+    let info = new Duty_register(
+        {
+            prisoner_id:req.body.id,
+            name:req.body.name,
+            department_id:req.body.department_id,
+            department_name:req.body.department_name,
+            shift:req.body.shift
+
+        }
+    );
+
+
+    info.save(function (err) {
+        if (err) {
+            return next(err);
+        }
+        console.log('New prisoner duty info added successfully');
+        res.send(info);
+    });
+
+
+};
+exports.search_duty_prisoner= function (req , res) {
+   
+    console.log("Search duty prisoner Api is called");
+    Duty_register.find( function (err, user) {
+
+        res.render('duty_prisoner',{user:user});
+    });
+};
+//-----------------------------
 exports.count_prisoners= function (req , res) {
     console.log("Count");
 
