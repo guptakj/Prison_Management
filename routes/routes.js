@@ -22,6 +22,7 @@ router.post('/search_interview_prisoner_by_name',controller.search_interview_pri
 router.get('/search_all_interview_prisoner',controller.search_all_interview_prisoner);
 router.post('/search_criminal_department_by_name',controller.search_criminal_department_by_name);
 router.get('/search_all_criminal_department',controller.search_all_criminal_department);
+router.get('/show_parole_prisoner',controller.show_parole_prisoner);
 
 router.post('/global_search',controller.global_search);
 
