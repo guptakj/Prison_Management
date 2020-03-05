@@ -438,7 +438,39 @@ exports.search_in_out_prisoner= function (req , res) {
         res.render('in-out_prisoner',{user:user});
     });
 };
-//------------------------------------------------------
+//-------------------------------------------------------DIARY--------------------------------------------------///
+exports.Diary_register= function(req,res)
+{
+    console.log("Adding DIARY DETAILS api is called");
+    let info = new Diary_register(
+        {
+            prisoner_id:req.body.prisoner_id,
+            name:req.body.nmae,
+            sentence_begin:req.body.sentence_begin,
+            sentence_end:req.body.sentence_end
+        }
+    );
+
+
+    info.save(function (err) {
+        if (err) {
+            return next(err);
+        }
+        console.log('New prisoner diary info added successfully');
+        res.send(info);
+    });
+
+
+};
+exports.search_all_prisoner_diary= function (req , res) {
+   
+    console.log("Search all prisoner diary Api is called");
+    Diary_register.find( function (err, user) {
+
+        res.render('diary_of_all_prisoner',{user:user});
+    });
+};
+//--------------------------------------------------------------------------------------------------------------
 exports.count_prisoners= function (req , res) {
     console.log("Count");
 
