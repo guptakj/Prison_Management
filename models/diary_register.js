@@ -7,4 +7,4 @@ const DiaryRegisterSchema = new mongoose.Schema({
     sentence_end: Date
 });
 
-module.exports = mongoose.model("Diary_register", DiaryRegisterSchema);
+module.exports = mongoose.model("diary_register", DiaryRegisterSchema);
