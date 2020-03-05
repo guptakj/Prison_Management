@@ -331,6 +331,41 @@ exports.search_all_interview_prisoner= function (req , res) {
         res.render('show_all_interview_prisoner',{user:user});
     });
 };
+//------------------------------------------------------parole------------------------------------------------//
+exports.Parole_register= function(req,res)
+{
+    console.log("Adding parole_register api is called");
+    let info = new Parole_register(
+        {
+            prisoner_id:req.body.id,
+            name:req.body.name,
+            address:req.body.address,
+            reason:req.body.reason,
+            sentence :req.body.sentence,
+            officer_in_charge:req.body.officer_in_charge
+
+        }
+    );
+
+
+    info.save(function (err) {
+        if (err) {
+            return next(err);
+        }
+        console.log('New prisoner parole info added successfully');
+        res.send(info);
+    });
+
+
+};
+exports.search_parole_prisoner= function (req , res) {
+   
+    console.log("Search all parole prisoner Api is called");
+    Parole_register.find( function (err, user) {
+
+        res.render('show_parole_prisoner',{user:user});
+    });
+};
 
 exports.count_prisoners= function (req , res) {
     console.log("Count");

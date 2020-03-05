@@ -3,7 +3,7 @@
 <head>
     <link rel="stylesheet" type="text/css" href="/css1/table.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <title>Show Details of interview prisoner </title>
+    <title>Show Details of prisoner on parole </title>
 </head>
 <body>
 
@@ -24,7 +24,7 @@
 </div>
 
 <div id="n1" style="text-align: center ;color: white">
-    <h2>Show Details of interview prisoner</h2>
+    <h2>Show Details of prisoner on parole</h2>
 </div>
 
 
@@ -36,16 +36,15 @@
         <tr>
 
             <th>Prisoner_Id  </th>
-            <th> Visitor Name  </th>
-            <th>Relation With Prisoner </th>
-            <th>Duration </th>
+            <th> Name  </th>
+            <th>Addreas </th>
+            <th>Reason </th>
 
-            <th>Time Start  </th>
+            <th>Sentence </th>
 
-            <th>Time End </th>
+            <th>Officer_in_charge </th>
 
-            <th>Visit Date </th>
-
+            
             
         </tr>
         </thead>
@@ -55,12 +54,12 @@
             <tr>
 
                 <td> <%= user[i].prisoner_id %></td>
-                <td> <%= user[i].visitor_name %></td>
-                <td> <%= user[i].relation_with_prisoner %></td>
-                <td> <%= user[i].duration %></td>
-                <td> <%= user[i].time_start %></td>
-                <td> <%= user[i].time_end %></td>
-                <td> <%= user[i].visit_date %></td>
+                <td> <%= user[i].name %></td>
+                <td> <%= user[i].address %></td>
+                <td> <%= user[i].reason %></td>
+                <td> <%= user[i].sentence  %></td>
+                <td> <%= user[i].officer_in_charge %></td>
+                
                 
 
 
