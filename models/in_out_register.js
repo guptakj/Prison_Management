@@ -11,4 +11,4 @@ const InOutRegisterSchema = new mongoose.Schema({
     place:{type:String,default:"Prison"}
 });
 
-module.exports = mongoose.model("In_Out_register", InOutRegisterSchema);
+module.exports = mongoose.model("in_out_register", InOutRegisterSchema);

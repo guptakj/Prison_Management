@@ -402,7 +402,43 @@ exports.search_duty_prisoner= function (req , res) {
         res.render('duty_prisoner',{user:user});
     });
 };
-//-----------------------------
+//---------------------------------------IN-OUT----------------------------------------------------//
+exports.In_out_register= function(req,res)
+{
+    console.log("Adding In_out DETAILS api is called");
+    let info = new In_out_register(
+        {
+            Visitor_type:req.body.Visitor_type,
+            visitor_id:req.body.visitor_id,
+            visitor_name:req.body.visitor_name,
+            date_in:req.body.date_in,
+            date_out:req.body.date_out,
+            time_in:req.body.time_in,
+            time_out:req.body.time_out,
+            place:req.body.place
+        }
+    );
+
+
+    info.save(function (err) {
+        if (err) {
+            return next(err);
+        }
+        console.log('New prisoner in-out info added successfully');
+        res.send(info);
+    });
+
+
+};
+exports.search_in_out_prisoner= function (req , res) {
+   
+    console.log("Search in-out prisoner Api is called");
+    In_out_register.find( function (err, user) {
+
+        res.render('in-out_prisoner',{user:user});
+    });
+};
+//------------------------------------------------------
 exports.count_prisoners= function (req , res) {
     console.log("Count");
 

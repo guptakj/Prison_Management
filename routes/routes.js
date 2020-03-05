@@ -24,6 +24,8 @@ router.post('/search_criminal_department_by_name',controller.search_criminal_dep
 router.get('/search_all_criminal_department',controller.search_all_criminal_department);
 router.get('/search_parole_prisoner',controller.search_parole_prisoner);
 router.get('/search_duty_prisoner',controller.search_duty_prisoner);
+router.get('/search_in_out_prisoner',controller.search_in_out_prisoner);
+
 
 
 
