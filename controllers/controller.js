@@ -445,7 +445,7 @@ exports.Diary_register= function(req,res)
     let info = new Diary_register(
         {
             prisoner_id:req.body.prisoner_id,
-            name:req.body.nmae,
+            name:req.body.name,
             sentence_begin:req.body.sentence_begin,
             sentence_end:req.body.sentence_end
         }
