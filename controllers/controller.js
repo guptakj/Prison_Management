@@ -500,3 +500,11 @@ exports.global_search= function (req , res) {
 
 };
 
+exports.search_all_prisoner_case_reg= function (req , res) {
+
+    console.log("Search case register  Api is called");
+    Case_register.find( function (err, user) {
+
+        res.render('show_case',{user:user});
+    });
+};
