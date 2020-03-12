@@ -445,7 +445,7 @@ exports.Diary_register= function(req,res)
     let info = new Diary_register(
         {
             prisoner_id:req.body.prisoner_id,
-            name:req.body.nmae,
+            name:req.body.name,
             sentence_begin:req.body.sentence_begin,
             sentence_end:req.body.sentence_end
         }
@@ -500,3 +500,11 @@ exports.global_search= function (req , res) {
 
 };
 
+exports.search_all_prisoner_case_reg= function (req , res) {
+
+    console.log("Search case register  Api is called");
+    Case_register.find( function (err, user) {
+
+        res.render('show_case',{user:user});
+    });
+};

@@ -3,7 +3,7 @@
 <head>
     <link rel="stylesheet" type="text/css" href="/css1/table.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <title>Show Details of criminals</title>
+    <title>Show Details of interview prisoner </title>
 </head>
 <body>
 
@@ -24,7 +24,7 @@
 </div>
 
 <div id="n1" style="text-align: center ;color: white">
-    <h2>Show Details of criminals</h2>
+    <h2>Show Details of interview prisoner</h2>
 </div>
 
 
@@ -37,21 +37,11 @@
         <tr>
 
             <th>Prisoner_Id  </th>
-            <th>Name  </th>
-            <th>Crime_Details  </th>
-            <th>Age  </th>
+            <th> Name  </th>
+            <th>Sentence Duration </th>
+            <th>Convection Details </th>
 
-            <th>Address  </th>
 
-            <th>Gender  </th>
-
-            <th>Nationality  </th>
-
-            <th>Occupation  </th>
-
-            <th>Photo  </th>
-
-            <th>Officer in Charge  </th>
 
         </tr>
         </thead>
@@ -60,16 +50,11 @@
         <% for(var i=0; i < user.length; i++) { %>
             <tr>
 
-                <td> <%= user[i].prisoner_id %></td>
+                <td> <%= user[i].id %></td>
                 <td> <%= user[i].name %></td>
-                <td> <%= user[i].crime_details %></td>
-                <td> <%= user[i].age %></td>
-                <td> <%= user[i].address %></td>
-                <td> <%= user[i].gender %></td>
-                <td> <%= user[i].nationality %></td>
-                <td> <%= user[i].occupation %></td>
-                <td> <%= user[i].photo %></td>
-                <td> <%= user[i].officer_in_charge %></td>
+                <td> <%= user[i].duration %></td>
+                <td> <%= user[i].convection_details %></td>
+
 
 
 
