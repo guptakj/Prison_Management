@@ -139,6 +139,7 @@ h3,h2{
 
 /* This container is needed to position the front and back side */
 .card1_inner {
+	
   position: relative;
   width: 200px;
   height: 200px;
@@ -163,12 +164,15 @@ h3,h2{
 
 /* Style the front side (fallback if image is missing) */
 .front_card_image {
+	
   background-color: #bbb;
   color: black;
 }
 
 /* Style the back side */
 .back_card_image {
+	
+	
   background-color: dodgerblue;
   color: white;
   transform: rotateY(180deg);
