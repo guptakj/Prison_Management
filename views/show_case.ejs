@@ -39,7 +39,7 @@
             <th>Prisoner_Id  </th>
             <th> Name  </th>
             <th>Sentence Duration </th>
-            <th>Convection Details </th>
+            <th>Conviction Details </th>
 
 
 
@@ -50,10 +50,10 @@
         <% for(var i=0; i < user.length; i++) { %>
             <tr>
 
-                <td> <%= user[i].id %></td>
+                <td> <%= user[i].prisoner_id %></td>
                 <td> <%= user[i].name %></td>
-                <td> <%= user[i].duration %></td>
-                <td> <%= user[i].convection_details %></td>
+                <td> <%= user[i].sentence_duration %></td>
+                <td> <%= user[i].conviction_details %></td>
 
 
 
