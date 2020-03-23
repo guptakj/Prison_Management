@@ -24,7 +24,12 @@ app.use(express.static('public'));
 var mongoose = require('mongoose');
 
 var mongoDB = 'mongodb+srv://PrisonSE:Prison%2E@cluster0-0na0d.mongodb.net/Prison_Management?retryWrites=true&w=majority';
-mongoose.connect(mongoDB, { useNewUrlParser: true });
+mongoose.connect(mongoDB, { useNewUrlParser: true , useUnifiedTopology: true })
+.then(() => console.log('DB Connected!'))
+.catch(err => {
+console.error(err);
+});
+
 
 //Get the default connection
 var db = mongoose.connection;
