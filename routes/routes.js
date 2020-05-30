@@ -17,6 +17,11 @@ router.get('/about', function (req, res) {
 router.get('/search_by_name',controller.search_by_name);
 router.get('/search_all',controller.search_all);
 router.get('/log_admin',controller.log_admin);
+router.post('/sign_admin',controller.add_admin_info);
+router.get('/log_police',controller.log_police);
+router.post('/sign_police',controller.add_police_info);
+router.get('/log_data',controller.log_data);
+router.post('/sign_data',controller.add_data_info);
 //router.post('/search_details_of_criminal',controller.show_prisoners_details_by_id);
 router.post('/search_interview_prisoner_by_name',controller.search_interview_prisoner_by_name);
 router.get('/search_all_interview_prisoner',controller.search_all_interview_prisoner);

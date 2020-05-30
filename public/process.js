@@ -1,6 +1,85 @@
 $(document).ready(function(){
 
+	$('#login-d').on('submit',function(e){
+		e.preventDefault();
+var name=$('#usernameq').val();
 
+var pass=$('#pwdq').val();
+//alert(name+" "+pass);
+
+$.ajax({
+	url:"/api/log_data",
+	type:"GET",
+	dataType:"json",
+	success:function(data){
+		var p=0;
+			for(var i=0;i<data.length;i++)
+			{
+				if(data[i].data_user===name&&data[i].data_pass===pass)
+				{
+					p=1;
+					alert("Login As Data Manager.")
+					window.location.href="caseRegister.html";
+					
+				}
+			}
+			if(p===0)
+			{
+				alert("Invalid username & password");
+				location.reload(true);
+			}
+			
+
+			//console.log(data);
+	},
+	error:function(){
+		console.log("error");
+	}
+
+
+});
+});
+
+
+	$('#login-p').on('submit',function(e){
+		e.preventDefault();
+var name=$('#username').val();
+
+var pass=$('#pwd').val();
+//alert(name+" "+pass);
+
+$.ajax({
+	url:"/api/log_police",
+	type:"GET",
+	dataType:"json",
+	success:function(data){
+		var p=0;
+			for(var i=0;i<data.length;i++)
+			{
+				if(data[i].police_user===name&&data[i].police_pass===pass)
+				{
+					p=1;
+					alert("Login As Police.")
+					window.location.href="caseRegister.html";
+					
+				}
+			}
+			if(p===0)
+			{
+				alert("Invalid username & password");
+				location.reload(true);
+			}
+			
+
+			//console.log(data);
+	},
+	error:function(){
+		console.log("error");
+	}
+
+
+});
+});
 
 
 	$('#login-a').on('submit',function(e){
@@ -21,6 +100,8 @@ $(document).ready(function(){
 							if(data[i].admin_user===name&&data[i].admin_pass===pass)
 							{
 								p=1;
+								alert("Login As Admin.")
+
 								window.location.href="caseRegister.html";
 							}
 						}
@@ -146,7 +227,8 @@ $(document).ready(function(){
 						contentType:"application/json",
 						success:function(data){
 							
-							window.location.href="criminalRegister.html";
+							location.reload(true);
+							//window.location.href="criminalRegister.html";
 						},
 						error:function(xhr,status,err){
 							console.log(err);

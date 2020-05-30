@@ -10,6 +10,7 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css1/custom-style.css">
+    <script src="jquery3.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   </head>
   <body class="bigbig">
@@ -26,7 +27,7 @@
                  <h3 style="color:white">
             Police Officer Login
           </h3>
-              <form role="form" >
+              <form role="form"  id="login-p">
                 <div class="form-group">
                   <label for="username" style="color:white">USERNAME:</label>
                   <input type="text" class="form-control" id="username" required="">
@@ -35,7 +36,7 @@
                   <label for="pwd" style="color:white">PASSWORD:</label>
                   <input type="password" class="form-control" id="pwd" required="">
                 </div>
-                <input type="submit" name="submit" value="Login" id="login-p">
+                <input type="submit" name="submit" value="Login">
                 
               </form><br>
               <button id="policesignin1">Signin</button>
@@ -44,14 +45,14 @@
               <h3 style="color:white">
             Police Officer Signin
           </h3>
-                <form role="form"  >
+                <form role="form" action="/api/sign_police" method="POST" >
                   <div class="form-group">
                     <label for="police_user" style="color:white">USERNAME:</label>
-                    <input type="text" class="form-control" id="police_user" required="">
+                    <input type="text" class="form-control" name="police_user" id="police_user" required="">
                   </div>
                   <div class="form-group">
                     <label for="pwqd1" style="color:white">PASSWORD:</label>
-                    <input type="password" class="form-control" id="pwqd1" required="">
+                    <input type="password" class="form-control" name="police_pass" id="pwqd1" required="">
                   </div>
                   <div class="form-group">
                     <label for="pqwd2" style="color:white">RE-ENTER PASSWORD:</label>
@@ -91,7 +92,7 @@
                <h3 style="color:white">
             Admin Signin
           </h3> 
-              <form role="form" >
+              <form role="form" action="/api/sign_admin" method="POST" >
                 <div class="form-group">
                   <label for="admin_name1" style="color:white">USERNAME:</label>
                   <input type="text" class="form-control" id="admin_name1" required="" name="admin_name1">
@@ -120,17 +121,17 @@
               <h3 style="color:white">
             Data Manager Login
           </h3>
-              <form role="form" >
+              <form role="form"  id="login-d">
                 <div class="form-group">
                   <label for="usernamqe" style="color:white">USERNAME:</label>
-                  <input type="text" class="form-control" id="usernamqe" required="">
+                  <input type="text" class="form-control" id="usernameq" required="">
                 </div>
                 <div class="form-group">
                   <label for="pwdq" style="color:white">PASSWORD:</label>
                   <input type="password" class="form-control" id="pwdq" required="">
                 </div>
 
-                <input type="submit" name="submit" value="Login" id="login-d">
+                <input type="submit" name="submit" value="Login">
 
               </form><br>
               <button id="datamsignin1">Signin</button>          
@@ -139,14 +140,14 @@
                 <h3 style="color:white">
             Data Manager Signin
           </h3>
-               <form role="form" >
+               <form role="form" action="/api/sign_data" method="POST">
               <div class="form-group">
                 <label for="data_user" style="color:white">USERNAME:</label>
-                <input type="text" class="form-control" id="data_user" required="">
+                <input type="text" class="form-control" name="data_user" id="data_user" required="">
               </div>
               <div class="form-group">
                 <label for="pwd1q" style="color:white">PASSWORD:</label>
-                <input type="password" class="form-control" id="pwd1q" required="">
+                <input type="password" class="form-control" name="data_pass" id="pwd1q" required="">
               </div>
               <div class="form-group">
                 <label for="pwd2q" style="color:white">RE-ENTER PASSWORD:</label>

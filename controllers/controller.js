@@ -20,7 +20,24 @@ exports.log_admin= function (req , res) {
 
     });
 };
+exports.log_police= function (req , res) {
+    
+    console.log("Police login Api is called");
+    Police.find( function (err, user) {
+        res.send(user);
+       
 
+    });
+};
+exports.log_data= function (req , res) {
+    
+    console.log("Data Manager login Api is called");
+    Data.find( function (err, user) {
+        res.send(user);
+       
+
+    });
+};
 exports.add_admin_info = function (req, res) {
     console.log("Add admin Information api is called");
     let info = new Admin(
@@ -37,8 +54,13 @@ exports.add_admin_info = function (req, res) {
         }
         console.log('Admin Data inserted');
         console.log(info);
-        res.send(info);
+        res.send(`
+        <h1>Successfully registered as `+info.admin_user+`.</h1>
+        <h1><a href="/home.html" style="text-decorartion:none;">Home</a></h1>
+        `);
     });
+
+
 
 
 };
@@ -60,6 +82,10 @@ exports.add_police_info = function (req, res) {
         }
         console.log('police Data inserted');
         //res.send(user);
+        res.send(`
+        <h1>Successfully registered as `+info.police_user+`.</h1>
+        <h1><a href="/home.html" style="text-decorartion:none;">Home</a></h1>
+        `);
     });
 
 
@@ -80,6 +106,10 @@ exports.add_data_info = function (req, res) {
             return next(err);
         }
         console.log('Data manager Data inserted');
+        res.send(`
+        <h1>Successfully registered as `+info.data_user+`.</h1>
+        <h1><a href="/home.html" style="text-decorartion:none;">Home</a></h1>
+        `);
         //res.send(user);
     });
 
