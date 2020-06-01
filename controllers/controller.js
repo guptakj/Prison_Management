@@ -48,16 +48,27 @@ exports.add_admin_info = function (req, res) {
         }
     );
 
-    info.save(function (err) {
-        if (err) {
-            return next(err);
+    Admin.find({admin_user:info.admin_user},(err,data)=>{
+        if(data.length>=1)
+        {
+            res.send(`
+                <h1>Username has been already taken.Try another</h1>
+                <h1><a href="/home.html" style="text-decorartion:none;">Home</a></h1>
+                `);
         }
-        console.log('Admin Data inserted');
-        console.log(info);
-        res.send(`
-        <h1>Successfully registered as `+info.admin_user+`.</h1>
-        <h1><a href="/home.html" style="text-decorartion:none;">Home</a></h1>
-        `);
+        else{
+            info.save(function (err) {
+                if (err) {
+                    return next(err);
+                }
+
+                console.log(info);
+                res.send(`
+                <h1>Successfully registered as `+info.admin_user+`.</h1>
+                <h1><a href="/home.html" style="text-decorartion:none;">Home</a></h1>
+                `);
+            });
+        }
     });
 
 
@@ -76,16 +87,27 @@ exports.add_police_info = function (req, res) {
         }
     );
 
-    info.save(function (err) {
-        if (err) {
-            return next(err);
+    Police.find({police_user:info.police_user},(err,data)=>{
+        if(data.length>=1)
+        {
+            res.send(`
+                <h1>Username has been already taken.Try another</h1>
+                <h1><a href="/home.html" style="text-decorartion:none;">Home</a></h1>
+                `);
         }
-        console.log('police Data inserted');
-        //res.send(user);
-        res.send(`
-        <h1>Successfully registered as `+info.police_user+`.</h1>
-        <h1><a href="/home.html" style="text-decorartion:none;">Home</a></h1>
-        `);
+        else{
+            info.save(function (err) {
+                if (err) {
+                    return next(err);
+                }
+
+                console.log(info);
+                res.send(`
+                <h1>Successfully registered as `+info.police_user+`.</h1>
+                <h1><a href="/home.html" style="text-decorartion:none;">Home</a></h1>
+                `);
+            });
+        }
     });
 
 
@@ -101,16 +123,27 @@ exports.add_data_info = function (req, res) {
         }
     );
 
-    info.save(function (err) {
-        if (err) {
-            return next(err);
+    Data.find({data_user:info.data_user},(err,data)=>{
+        if(data.length>=1)
+        {
+            res.send(`
+                <h1>Username has been already taken.Try another</h1>
+                <h1><a href="/home.html" style="text-decorartion:none;">Home</a></h1>
+                `);
         }
-        console.log('Data manager Data inserted');
-        res.send(`
-        <h1>Successfully registered as `+info.data_user+`.</h1>
-        <h1><a href="/home.html" style="text-decorartion:none;">Home</a></h1>
-        `);
-        //res.send(user);
+        else{
+            info.save(function (err) {
+                if (err) {
+                    return next(err);
+                }
+
+                console.log(info);
+                res.send(`
+                <h1>Successfully registered as `+info.data_user+`.</h1>
+                <h1><a href="/home.html" style="text-decorartion:none;">Home</a></h1>
+                `);
+            });
+        }
     });
 
 

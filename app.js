@@ -22,7 +22,6 @@ app.use(express.static('public'));
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
 //Import the mongoose module
 var mongoose = require('mongoose');
-//var mongoDB= "mongodb://localhost:27017/prisonmanagement";
 var mongoDB = 'mongodb+srv://PrisonSE:Prison%2E@cluster0-0na0d.mongodb.net/Prison_Management?retryWrites=true&w=majority';
 mongoose.connect(mongoDB, { useNewUrlParser: true , useUnifiedTopology: true })
 .then(() => console.log('DB Connected!'))
