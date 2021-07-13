@@ -47,6 +47,6 @@ app.use('/api', routes);
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-http.listen(port, function() {
+http.listen(port,'0.0.0.0', function() {
     console.log("Listening on *:" + port);
 });
